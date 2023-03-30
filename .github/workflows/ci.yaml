@@ -52,7 +52,7 @@ jobs:
       id: extract_tag_name
 
     - name: Build xAOD Image
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: sslhep/servicex_code_gen_func_adl_xaod:${{ steps.extract_tag_name.outputs.imagetag }}
         username: ${{ secrets.DOCKER_USERNAME }}
